@@ -416,7 +416,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 164, 68, 0.5), rgba(0, 0, 0, 0.5)) top center;
+  background: linear-gradient(rgba(0, 164, 68, 0.8), rgba(0, 0, 0, 0.5)) top center;
   background-size: cover;
   position: relative;
   margin-bottom: -90px;
@@ -429,6 +429,16 @@ h6 {
   min-width: 100%;
   min-height: 100%;
   z-index:-100;
+}
+
+#hero-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -100;
 }
 
 #hero .hero-container {
@@ -763,10 +773,46 @@ section {
 .shesha-kontaineri{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .erti-shesha{
-  flex: 1 0 21%;
+  flex: 1;
+}
+
+.erti-shesha:nth-child(3){
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .erti-shesha{
+    flex: 1 0 100%;
+  }
+
+  .text-light{
+    max-width: 360px;
+    font-size: 18px;
+  }
+
+  .header .container{
+  width: 100%;
+  }
+
+  .header{
+  width: 100vw;
+  }
+
+  .back-to-top{
+    right: 20px;
+  }
+
+  .foot-links-and-logo{
+    display: none !important;
+  }
+
+
 }
 
 .shesha{
@@ -775,6 +821,7 @@ section {
   background-color: #111;
   color: white;
   border-radius: 10px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -784,6 +831,8 @@ section {
   background: linear-gradient(rgba(23, 128, 40, 0.8), rgba(3, 92, 22, 0.8)), url("../img/The-Importance-of-Sustainable-Timber-for-The-Future-of-Australia-1920x960.webp") fixed center center;
   background-size: cover;
   padding: 60px 0;
+
+  display: flex;
 
 }
 
@@ -802,6 +851,14 @@ section {
   list-style-type: none;
   cursor: pointer;
   transition: transform 1s ease;
+}
+
+.cta ul{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #cta ul li:hover{
